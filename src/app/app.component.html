@@ -21,5 +21,15 @@
   <div class="col col-sm-12">
     <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
   </div>
-  <h2>{{ intervalCounter }}</h2>
+  <h2>
+    {{ intervalCounter }}
+  </h2>
+  <div class="row">
+    <div class="col col-xs-6">
+      <app-even *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-even>
+    </div>
+    <div class="col col-xs-6">
+      <app-odd *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-odd>
+    </div>
+  </div>
 </div>

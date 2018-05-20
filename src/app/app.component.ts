@@ -7,8 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   intervalCounter: number;
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
 
   onIntervalFired(val){
     this.intervalCounter = val;
+    if (val % 2 === 0) {
+      this.evenNumbers.push(val);
+    }else{
+      this.oddNumbers.push(val);
+    }
   }
 }
